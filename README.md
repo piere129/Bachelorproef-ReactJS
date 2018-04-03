@@ -1,6 +1,6 @@
 # Bachelorproef-ReactJS
 
-# Description
+## Description
 
 My React prototype, created to test the functionality differences between the average ReactJS app and its' PreactJS counterpart. 
 Technologies used include Redux, routing, nested components, et cetera. 
