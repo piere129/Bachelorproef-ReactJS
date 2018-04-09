@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import { Provider } from 'react-redux';
 import Store from '../store/store-index';
+import Parent from './parent/parent';
 
 const store = Store;
 

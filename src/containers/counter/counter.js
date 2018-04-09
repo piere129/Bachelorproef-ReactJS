@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
 import {increaseAction} from '../../actions/actions';
-import './test.css'
+import './counter.css'
 
- class Test extends Component {
+ class CounterComponent extends Component {
     render() {
         const { value,increaseAction } = this.props;
         return (
@@ -30,9 +30,9 @@ function mapDispatchToProps() {
   };
 }
 
-const Tester = connect(
+const Counter = connect(
   mapStateToProps,
   mapDispatchToProps()
-)(Test);
+)(CounterComponent);
 
-export default Tester;
+export default Counter;
