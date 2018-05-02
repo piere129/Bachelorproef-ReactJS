@@ -1,38 +1,33 @@
 import React, { Component } from 'react';
-import {connect} from 'react-redux';
 import { Link } from 'react-router-dom';
-import './header.css';
+import { Navbar, NavItem, Nav } from 'react-bootstrap';
 
 export class HeaderComponent extends Component {
+
     render() {
         return (
-     <nav class="navbar navbar-expand-lg sticky-top navbar-light bg-light">
-          <h2>Header</h2>
-         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-         <ul>
-        <li><Link to='/'>Counter</Link></li>
-        <li><Link to='/test'>Nesting</Link></li>
-      </ul>
-         </div>
-    </nav>
-        );
+            <Navbar inverse className="test">
+                <Navbar.Header>
+                    <Navbar.Brand>
+                        <Link to="/home"> Home </Link>
+                    </Navbar.Brand>
+                </Navbar.Header>
+                <Nav pullRight>
+                    <NavItem componentClass={Link} href="/shoppingList" to="/shoppingList">
+
+                    </NavItem>
+                    <NavItem componentClass={Link} href="/login" to="/login">
+                        Log in
+                    </NavItem>
+                    <NavItem componentClass={Link} href="/register" to="/register">
+                        Register
+                    </NavItem>
+                </Nav>
+            </Navbar>
+            );
     }
-}
+};
 
-function mapStateToProps() {
-    return {};
-}
-
-function mapDispatchToProps() {
-    return {
-    };
-}
-
-const Header = connect(
-    //state setten voor dispatch, moet hier niet expliciet gebeuren maar moet er wel bijstaan
-    //aangezien mapdispatch 2e argument moet zijn!
-    mapStateToProps,
-    mapDispatchToProps()
-)(HeaderComponent);
+ const Header = HeaderComponent;
 
 export default Header;

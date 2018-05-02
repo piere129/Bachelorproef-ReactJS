@@ -1,8 +1,8 @@
-import { combineReducers } from 'redux'
-import { routerReducer } from 'react-router-redux'
-import {testReducer} from './test.reducer'
+import { combineReducers } from 'redux';
+import { fetchAllReducer } from './FetchAllReducer.reducer';
+import { reducer as formReducer } from 'redux-form';
 
 export default combineReducers({
-  routing: routerReducer,
-  testReducer: testReducer
-})
+    fetchAllReducer: fetchAllReducer,
+    form: formReducer,
+});

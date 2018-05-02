@@ -1,32 +1,55 @@
-import React, { Component } from 'react';
-import NestParent from '../nestParent/nestParent';
+import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import {Switch, Route} from 'react-router-dom'
-import Counter from '../counter/counter';
+import {fetchAllProducts} from '../../actions/actions';
+import Products from "../Products/Products";
+import './Home.css';
 
 export class HomeComponent extends Component {
-    render() {
-        return (
-            <div>
-                <h1>Home component </h1>
 
+    constructor(props) {
+        super(props);
+    }
+
+    componentWillMount() {
+        this.props.fetchAllProducts();
+    }
+
+    render() {
+        const {items} = this.props;
+
+        return (
+            <div className="wrapper">
+                <div className="block">
+                    <h1>Products:</h1>
+                    <div className="btn-group" role="group" aria-label="Basic example">
+                        <p> Filter by category: </p>
+                        <button type="button" className="btn btn-secondary">Game</button>
+                        <button type="button" className="btn btn-secondary">Household</button>
+                        <button type="button" className="btn btn-secondary">Gadget</button>
+                        <button type="button" className="btn btn-secondary">Movie</button>
+                        <button type="button" className="btn btn-secondary">Laptops</button>
+                    </div>
+                </div>
+                <Products items={items}/>
+                <hr/>
             </div>
         );
     }
 }
 
-function mapStateToProps() {
-    return {};
+function mapStateToProps(state) {
+    return {
+        items: state.fetchAllReducer.items,
+    };
 }
 
 function mapDispatchToProps() {
     return {
+        fetchAllProducts,
     };
 }
 
 const Home = connect(
-    //state setten voor dispatch, moet hier niet expliciet gebeuren maar moet er wel bijstaan
-    //aangezien mapdispatch 2e argument moet zijn!
     mapStateToProps,
     mapDispatchToProps()
 )(HomeComponent);
