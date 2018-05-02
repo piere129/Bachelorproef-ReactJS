@@ -5,7 +5,7 @@
     float: left;
     overflow: hidden;
     padding: 20px 20px 0 20px;
-    width:25%;
+    width:33%;
     height: 400px;
     background: white;
     text-align: center;
@@ -110,4 +110,16 @@
 .snip1418:hover .add-to-cart i,
 .snip1418.hover .add-to-cart i {
     background-color: #2980b9;
+}
+
+@media screen and(max-width: 1200px) {
+    .snip1418  {
+        width: 33%;
+    }
+}
+
+@media screen and(max-width: 768px) {
+    .snip1418 {
+        width: 100%;
+    }
 }

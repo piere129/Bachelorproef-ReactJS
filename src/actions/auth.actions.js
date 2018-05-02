@@ -1,7 +1,7 @@
-import { api } from '../api/api-manager';
-import { auth } from '../services/AuthManager';
-import { handleError } from './messages.actions';
-import { history } from '../routes';
+import {api} from '../api/api-manager';
+import {auth} from '../services/AuthManager';
+import {handleError} from './messages.actions';
+import {history} from '../routes';
 
 export const login = values => dispatch => {
     let request = {
@@ -15,8 +15,8 @@ export const login = values => dispatch => {
 
     api.request(request).then((response) => {
         auth.saveToken(response.body.user, response.body.jwt);
-        dispatch({ type: 'IS_LOGGED_IN' });
-        dispatch({ type: 'LOGIN_SUCCESS' });
+        dispatch({type: 'IS_LOGGED_IN'});
+        dispatch({type: 'LOGIN_SUCCESS'});
         history.push('/home');
     }).catch(err => {
         dispatch(handleError(err));
@@ -32,7 +32,7 @@ export const registerNewUser = values => dispatch => {
     };
 
     api.request(request).then((response) => {
-        dispatch({ type: 'REGISTER_SUCCESS' });
+        dispatch({type: 'REGISTER_SUCCESS'});
         history.push('/login');
     }).catch(err => {
         dispatch(handleError(err));
@@ -41,6 +41,6 @@ export const registerNewUser = values => dispatch => {
 
 export const logOut = () => dispatch => {
     auth.removeToken();
-    dispatch({ type: 'IS_LOGGED_OUT' });
+    dispatch({type: 'IS_LOGGED_OUT'});
     history.push('/login');
 };

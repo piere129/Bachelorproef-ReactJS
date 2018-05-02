@@ -6,11 +6,12 @@ export class Products extends Component {
     render() {
 
         return (
-            <div className="row row-eq-height">
+            <div>
                 {
                     this.props.items.map(item => {
 
                         return (
+                            <div className="break">
                             <Link to={'/projects/' + item.name} key={item.name}>
                                 <figure className="snip1418">
                                     <img src={item.image}/>
@@ -27,7 +28,7 @@ export class Products extends Component {
                                     </figcaption>
                                 </figure>
                             </Link>
-
+                            </div>
                         );
                     })
                 }
