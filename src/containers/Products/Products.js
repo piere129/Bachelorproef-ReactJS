@@ -9,11 +9,10 @@ export class Products extends Component {
             <div>
                 {
                     this.props.items.map(item => {
-
                         return (
                             <Link to={'/projects/' + item.name} key={item.name}>
                                 <figure className="snip1418">
-                                    <img src={item.image}/>
+                                    <img src={item.image} alt="product image"/>
                                     <div className="add-to-cart">
                                         <i className="ion-android-add"></i>
                                         <span>Add to Cart</span>

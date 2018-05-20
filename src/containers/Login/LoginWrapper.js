@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import {login} from '../../actions/auth.actions';
 import LoginUser from './Login';
 
 export class LoginWrapperComponent extends Component {
 
     submitLogin = values => {
-        
+        this.props.login(values);
     };
 
     render() {
@@ -22,7 +23,7 @@ function mapStateToProps() {
 
 function mapDispatchToProps() {
     return {
-        
+        login
     };
 }
 

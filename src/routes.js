@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
 import { Router, Route, Switch, Redirect } from 'react-router-dom';
 import createBrowserHistory from 'history/createBrowserHistory';
 
@@ -33,6 +32,4 @@ class AppRouteComponent extends Component {
 
 AppRouteComponent.propTypes = {};
 
-const Routes = connect()(AppRouteComponent);
-
-export default Routes;
+export default AppRouteComponent;

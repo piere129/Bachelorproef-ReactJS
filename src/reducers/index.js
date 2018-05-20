@@ -1,8 +1,10 @@
 import { combineReducers } from 'redux';
-import { fetchAllReducer } from './FetchAllReducer.reducer';
+import { fetchProductsByCategoryReducer } from './FetchProductsByCategoryReducer.reducer';
+import { fetchLoginReducer} from "./FetchLoginReducer.reducer";
 import { reducer as formReducer } from 'redux-form';
 
 export default combineReducers({
-    fetchAllReducer: fetchAllReducer,
+    fetchProductsByCategoryReducer: fetchProductsByCategoryReducer,
+    fetchLoginReducer: fetchLoginReducer,
     form: formReducer,
 });

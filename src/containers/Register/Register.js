@@ -5,7 +5,7 @@ import RenderField from '../RenderField/RenderField';
 
 const SyncValidationForm = props => {
 
-    const { handleSubmit, submitting, t } = props;
+    const { handleSubmit, submitting } = props;
     return (
         <div className="item-wrapper-form">
             <form onSubmit={handleSubmit}>

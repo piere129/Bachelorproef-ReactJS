@@ -1,33 +1,50 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
-import { Navbar, NavItem, Nav } from 'react-bootstrap';
+import React, {Component} from 'react';
+import {Link} from 'react-router-dom';
+import {connect} from "react-redux";
+import './Header.css';
 
 export class HeaderComponent extends Component {
 
     render() {
+
+        const {username} = this.props;
+
         return (
-            <Navbar inverse className="test">
-                <Navbar.Header>
-                    <Navbar.Brand>
-                        <Link to="/home"> Home </Link>
-                    </Navbar.Brand>
-                </Navbar.Header>
-                <Nav pullRight>
-                    <NavItem componentClass={Link} href="/shoppingList" to="/shoppingList">
+            <div className="header">
+                <div className="header-container">
+                    <Link to="/home" class="logo">home</Link>
+                    {this.props.username !== "" ?
+                        <div className="link">
+                            Welkom {username}!
+                        </div> : null
+                    }
+                    <div className="header-right">
+                        {this.props.username !== "" ? null :
+                            <div>
+                                <Link to="/login" class="link">login</Link>
+                                <Link to="/register" class="link">register</Link>
+                            </div>
+                        }
 
-                    </NavItem>
-                    <NavItem componentClass={Link} href="/login" to="/login">
-                        Log in
-                    </NavItem>
-                    <NavItem componentClass={Link} href="/register" to="/register">
-                        Register
-                    </NavItem>
-                </Nav>
-            </Navbar>
-            );
+                    </div>
+                </div>
+            </div>
+             );
+        }
+    };
+
+    function mapStateToProps(state) {
+        return {
+        username: state.fetchLoginReducer.username,
+    };
     }
-};
 
- const Header = HeaderComponent;
+    function mapDispatchToProps() {
+    }
 
-export default Header;
+    const Header = connect(
+    mapStateToProps,
+    mapDispatchToProps()
+    )(HeaderComponent);
+
+    export default Header;
