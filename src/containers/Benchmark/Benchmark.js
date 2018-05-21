@@ -25,7 +25,7 @@ export class BenchmarkComponent extends Component {
         return (
             <div>
                 <ol>
-                    <p> List starts here:</p>
+                    <p> Array starts here:</p>
                     {
                         array.map(item =>
                             <li> {item} </li>
