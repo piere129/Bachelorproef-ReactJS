@@ -12,7 +12,8 @@ export class HeaderComponent extends Component {
         return (
             <div className="header">
                 <div className="header-container">
-                    <Link to="/home" class="logo">home</Link>
+                    <Link to="/home" className="logo">Home</Link>
+                    <Link to="/benchmark" className="link">Benchmark</Link>
                     {this.props.username !== "" ?
                         <div className="link">
                             Welkom {username}!
@@ -21,8 +22,8 @@ export class HeaderComponent extends Component {
                     <div className="header-right">
                         {this.props.username !== "" ? null :
                             <div>
-                                <Link to="/login" class="link">login</Link>
-                                <Link to="/register" class="link">register</Link>
+                                <Link to="/login" className="link">Login</Link>
+                                <Link to="/register" className="link">Register</Link>
                             </div>
                         }
 
