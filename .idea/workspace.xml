@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="256fbbc0-ebb5-48c7-b82e-8905673dda85" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/containers/Benchmark/Benchmark.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Benchmark/Benchmark.js" afterDir="false" />
-    </list>
+    <list default="true" id="256fbbc0-ebb5-48c7-b82e-8905673dda85" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,8 +23,8 @@
       <file leaf-file-name="Benchmark.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/containers/Benchmark/Benchmark.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="27" column="29" selection-start-line="27" selection-start-column="29" selection-end-line="27" selection-end-column="29" />
+            <state relative-caret-position="119">
+              <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -375,12 +373,12 @@
       <workItem from="1526756674884" duration="2212000" />
       <workItem from="1526819165029" duration="5036000" />
       <workItem from="1526889554062" duration="5758000" />
-      <workItem from="1526895952313" duration="2286000" />
+      <workItem from="1526895952313" duration="3560000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="82506000" />
+    <option name="totallyTimeSpent" value="83780000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -764,8 +762,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/containers/Benchmark/Benchmark.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="27" column="29" selection-start-line="27" selection-start-column="29" selection-end-line="27" selection-end-column="29" />
+        <state relative-caret-position="119">
+          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
